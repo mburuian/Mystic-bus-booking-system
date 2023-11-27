@@ -14,7 +14,6 @@ void Admin();
 void booking() {
     int rows = 10, cols = 4;
     char seats[rows][cols];
-    int i, j;
     char name[50];
     char from[50];
     char to[50];
@@ -88,8 +87,8 @@ struct Bus {
 
    
     // Initialize the seats to 'O' for available
-    for (i = 0; i < rows; i++) {
-        for (j = 0; j < cols; j++) {
+    for ( int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
             seats[i][j] = 'O';
         }
     }
@@ -97,14 +96,14 @@ struct Bus {
     // Display the seats
     printf("\n\n");
     printf("   A B C D\n");
-    for (i = 0; i < rows; i++) {
+    for (int i = 0; i < rows; i++) {
         printf("%2d ", i + 1);
-        for (j = 0; j < cols; j++) {
+        for (int j = 0; j < cols; j++) {
             printf("%c ", seats[i][j]);
         }
         printf("\n");
     }
-
+    int i,j;
     // Ask the user which seat they want to book
     printf("\nEnter the row number of the seat you want to book: ");
     scanf("%d", &i);
